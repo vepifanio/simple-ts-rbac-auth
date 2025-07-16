@@ -59,7 +59,21 @@ npm run dev
 - `src/plugins` - Plugins Fastify
 - `src/db` - Configurações e migrações do banco de dados
 
-## 🔍 Padrões de Projeto
+## �️ Rotas da API
+
+### Login
+
+```http
+POST http://localhost:3333/login
+Content-Type: application/json
+
+{
+  "email": "teste@teste.com",
+  "password": "teste"
+}
+```
+
+## �🔍 Padrões de Projeto
 
 - **Repository Pattern** - Abstração da camada de dados
 - **Service Layer** - Separação da lógica de negócios
