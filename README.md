@@ -12,7 +12,19 @@ Sistema de autenticação simples com RBAC (Role-Based Access Control) construí
 
 ## 🚀 Setup
 
-1. **Instale as dependências:**
+1. **Inicie o MongoDB com Docker Compose:**
+
+```bash
+docker compose up -d
+```
+
+Isso irá iniciar uma instância do MongoDB com as seguintes configurações:
+
+- Usuário: admin
+- Senha: password123
+- Porta: 27017
+
+2. **Instale as dependências:**
 
 ```bash
 # Usando pnpm
@@ -22,11 +34,11 @@ pnpm install
 npm install
 ```
 
-2. **Configure as variáveis de ambiente:**
+3. **Configure as variáveis de ambiente:**
    Crie um arquivo `.env` na raiz do projeto:
 
 ```env
-MONGODB_URI=sua_uri_mongodb
+MONGODB_URI=mongodb://admin:password123@localhost:27017
 JWT_SECRET=seu_secret_jwt
 ```
 
